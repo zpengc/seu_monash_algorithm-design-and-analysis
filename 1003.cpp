@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void bubble_sort_one_iter(int a[], int size)
+{
+    for(int i=0;i<size-1;i++)
+    {
+        if(a[i]>a[i+1])
+        {
+            swap(a[i], a[i+1]);
+        }
+    }
+    for(int i=0;i<size;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int size;
+        cin>>size;
+        int a[size];
+        for(int i=0;i<size;i++)
+        {
+            cin>>a[i];
+        }
+        bubble_sort_one_iter(a, size);
+    }
+    return 0;
+}
