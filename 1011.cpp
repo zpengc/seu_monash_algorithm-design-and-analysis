@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cfloat>
-#include<cmath>
+#include<math.h>
 #include<iomanip>
 using namespace std;
 
@@ -27,9 +27,9 @@ int compareY(const void* a, const void* b)
 
 float dist(Point p1, Point p2)
 {
-    // 必须加1.0，sqrt接受的参数没有int类型
-    // https://stackoverflow.com/questions/19613191/why-does-sqrt-work-fine-on-an-int-variable-if-it-is-not-defined-for-an-int
-	return sqrt( 1.0 * (p1.x - p2.x)*(p1.x - p2.x) + 1.0 * (p1.y - p2.y)*(p1.y - p2.y));
+    // 乘以1.0防止int类型溢出
+	float x = sqrt( 1.0*(p1.x - p2.x)*1.0*(p1.x - p2.x) + 1.0*(p1.y - p2.y)*1.0*(p1.y - p2.y));
+    return x;
 }
 
 float bruteForce(Point P[], int n)
