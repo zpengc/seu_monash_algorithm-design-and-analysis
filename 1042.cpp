@@ -9,13 +9,13 @@ using namespace std;
 
 int func(int days[], int costs[], int len, int n_costs)
 {
-    // dp[i]表示第i天旅行的费用
+    // dp[i]表示前i天旅行的费用
     int dp[366];
     for(int i=0;i<366;i++)
     {
         dp[i] = INT_MAX;
     }
-    // 第0天，，没有旅行，没有费用
+    // 前0天，没有旅行，没有费用
     dp[0] = 0;
     // 扫描days数组的下标
     int idx = 0;
