@@ -22,6 +22,7 @@ int func(int days[], int costs[], int len, int n_costs)
     for(int i=1;i<366;i++)
     {
         // 第i天不旅行，防止idx下标出界
+        // idx>=len必须放在前面，先进行判断，否则会造成缓冲区溢出
         if(days[idx] != i || idx>=len)
         {
             // 费用和之前保持不变
