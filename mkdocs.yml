@@ -1,0 +1,4 @@
+site_name: 东南大学算法设计与分析课程OJ 
+theme:
+ name: material
+repo_url: https://github.com/zpengc/seu_monash_algorithm-design-and-analysis
